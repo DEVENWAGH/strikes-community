@@ -1,0 +1,23 @@
+{
+    "name": "@repo/worker",
+    "version": "0.1.0",
+    "main": "./src/index.ts",
+    "scripts": {
+        "dev": "npx tsx --env-file=../../.env --watch src/index.ts",
+        "build": "tsc",
+        "start": "npx tsx src/index.ts"
+    },
+    "dependencies": {
+        "@repo/db": "workspace:*",
+        "@repo/kafka": "workspace:*",
+        "@repo/redis": "workspace:*",
+        "dotenv": "^16.4.5"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/typescript-config": "workspace:*",
+        "@types/node": "^22.0.0",
+        "tsc-watch": "^6.2.0",
+        "typescript": "^5"
+    }
+}
